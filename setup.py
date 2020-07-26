@@ -1,14 +1,20 @@
 from distutils.core import setup
+
+with open('README.md') as f:
+  long_description = f.read()
+
 setup(
   name = 'remote_postgres',         # How you named your package folder (MyLib)
   packages = ['remote_postgres'],   # Chose the same as "name"
-  version = '1.1',      # Start with a small number and increase it with every change you make
+  version = '1.2',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'RemotePostgres is a way to easily access a remote Postgres database and perform queries',   # Give a short description about your library
+  long_description=long_description,
+  long_description_content_type='text/markdown',
   author = 'Vijay Balasubramaniam',                   # Type in your name
   author_email = 'vbalasu@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/vbalasu/RemotePostgres',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/vbalasu/RemotePostgres/archive/v1.1.tar.gz',
+  download_url = 'https://github.com/vbalasu/RemotePostgres/archive/v1.2.tar.gz',
   keywords = ['postgres', 'remote'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
       'psycopg2-binary'
