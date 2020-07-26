@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 
 with open('README.md') as f:
   long_description = f.read()
@@ -6,11 +6,11 @@ with open('README.md') as f:
 setup(
   name = 'remote_postgres',         # How you named your package folder (MyLib)
   packages = ['remote_postgres'],   # Chose the same as "name"
-  version = '1.2',      # Start with a small number and increase it with every change you make
+  version = '1.2.5',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'RemotePostgres is a way to easily access a remote Postgres database and perform queries',   # Give a short description about your library
-  long_description=long_description,
-  long_description_content_type='text/markdown',
+  long_description = long_description,
+  long_description_content_type = 'text/plain',
   author = 'Vijay Balasubramaniam',                   # Type in your name
   author_email = 'vbalasu@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/vbalasu/RemotePostgres',   # Provide either the link to your github or to your website
